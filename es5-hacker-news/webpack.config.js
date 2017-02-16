@@ -7,6 +7,9 @@ module.exports = {
 	path: 'dist',
 	filename: 'bundle.[hash].js'
     },
+    stats: {
+	children: false,
+    },
     devtool: 'eval',
     module:{
 	rules:[{
