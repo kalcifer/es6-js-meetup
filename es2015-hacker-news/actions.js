@@ -1,12 +1,13 @@
-var makeRequest = require('./utils');
-var MAX_ITEMS = require('./reducer');
+const makeRequest = require('./utils');
+const MAX_ITEMS = require('./reducer');
+
 
 function getNewStories() {
     return function (dispatch) {
         dispatch({ type: 'TOPNEWS_LOADING' });
         return makeRequest('GET', 'https://hacker-news.firebaseio.com/v0/topstories.json')
-          .then(function(response){ return JSON.parse(response);})
-          .then(function(response){
+          .then(response => JSON.parse(response))
+          .then(response => {
               response.map(function(item, index) {
                   if (index > MAX_ITEMS) return;
                   return makeRequest('GET', 'https://hacker-news.firebaseio.com/v0/item/' + item + '.json')

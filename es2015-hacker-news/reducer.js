@@ -1,9 +1,8 @@
-var Redux = require('redux');
+const Redux = require('redux');
 
-const MAX_ITEMS = 28;
-module.exports = MAX_ITEMS;
+export const MAX_ITEMS = 28;
 
-var newsStories = function (state, action) {
+const newsStories = function (state ={status: 'init'}, action) {
     state = state || { status: 'init' };
     switch (action.type) {
     case 'TOPNEWS_LOADING':

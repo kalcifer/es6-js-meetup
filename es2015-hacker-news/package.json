@@ -1,9 +1,10 @@
 {
-  "name": "es5-hacker-news",
+  "name": "es2015-hacker-news",
   "version": "1.0.0",
   "description": "Example app in es5",
   "main": "index.js",
   "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --inline --hot --progress",
     "build": "webpack --watch",
     "test": "jest --verbose"
   },
@@ -25,6 +26,8 @@
     "jest": "^18.1.0",
     "preact": "^7.2.0",
     "preact-compat": "^3.13.1",
+    "react": "^15.4.2",
+    "react-hot-loader": "^1.3.1",
     "react-redux": "^5.0.2",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
@@ -36,6 +39,9 @@
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.0"
+    "eslint-plugin-react": "^6.10.0",
+    "react-hot-loader": "^1.3.1",
+    "webpack-dev-server": "^2.3.0",
+    "webpack-livereload-plugin": "^0.10.0"
   }
 }
