@@ -1,7 +1,5 @@
 var Redux = require('redux');
-
-const MAX_ITEMS = 28;
-module.exports = MAX_ITEMS;
+var MAX_ITEMS = require('./maxConstant');
 
 var newsStories = function (state, action) {
     state = state || { status: 'init' };
@@ -18,6 +16,7 @@ var newsStories = function (state, action) {
         };
     case 'ITEM_SUCCESS':
         var items = state.items;
+        if(!items) return state;
         items[action.id] = action.data;
         return {
             status: Object.keys(items).length === MAX_ITEMS ? 'success' : state.status,

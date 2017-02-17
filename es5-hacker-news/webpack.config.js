@@ -5,19 +5,13 @@ module.exports = {
     entry: './index.js',
     output: {
         path: 'dist',
+        publicPath: '/',
         filename: 'bundle.[hash].js'
     },
     stats: {
         children: false
     },
     devtool: 'eval',
-    module: {
-        rules: [{
-            test: /\.js$/,
-            use: 'babel-loader',
-            exclude: /node_modules/
-        }],
-    },
     resolve: {
         alias: {
             react: 'preact-compat',

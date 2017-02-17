@@ -4,15 +4,6 @@
         "commonjs": true
     },
     "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
-            "jsx": true
-        }
-    },
-    "plugins": [
-        "react"
-    ],
     "rules": {
         "indent": [
             "error",
@@ -29,10 +20,6 @@
         "semi": [
             "error",
             "always"
-        ],
-        "react/jsx-uses-vars": [
-            "error"
-        ],
-        "react/jsx-uses-react": "error"
+        ]
     }
 }

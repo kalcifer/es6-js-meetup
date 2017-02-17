@@ -10,9 +10,11 @@ var store = Redux.createStore(reducer, Redux.applyMiddleware(thunk));
 var App = require('./app.js');
 
 function render() {
-    return (<ReactRedux.Provider store={store}>
-      <App />
-    </ReactRedux.Provider>);
+    return (React.createElement(
+              ReactRedux.Provider,
+              { store: store },
+              React.createElement(App, null)
+        ));
 }
 
 ReactDOM.render(render(), document.getElementById('container'));
